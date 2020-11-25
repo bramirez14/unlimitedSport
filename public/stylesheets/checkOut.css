@@ -1,0 +1,287 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+/*Aca comeinza el section y sus posiciones*/
+
+.articleProduct{
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.products{
+    width: 100%;
+    margin-top: 5%;
+}
+
+.product{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 2%;
+    border-top:1px solid grey;
+}
+
+.delete{
+    width: 10%;
+    border-right: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quit{
+    display: flex;
+    
+}
+
+.quit button{
+    border:none;
+}
+/*Aca se encuentra todo lo que esta la img y la description*/
+.image-descrip{
+    width: 60%;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 3%;
+}
+
+.image{
+    width: 40%;
+
+}
+
+.image img{
+    width: 100%;
+}
+
+.description{
+    width: 60%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.description h2{
+    font-size: 100%;
+}
+
+.description p{
+    margin-bottom: 0;
+}
+/*Aca termina la img y la description*/
+
+.price{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid grey;
+}
+
+.money h3{
+    font-size: 100%;
+}
+
+.bottom{
+    border:1px solid silver;
+    text-align:center;
+    margin-top: 5%;
+}
+
+.bottom a{
+    text-decoration: none;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+}
+
+.sale-product{
+    margin-top: 10%;
+}
+
+.sale-product h4{
+    font-size: 150%;
+}
+
+.info-price h4{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.pay button{
+    width:100%;
+    font-size: 130%;
+    background-color:rgb(0,154,202);
+    border: 0;
+    border-radius: 10px;
+    box-shadow:7px 5px 9px black;
+    margin-top: 5%;
+}
+
+.number, .continue,.bottom_delete{
+    display: none;
+}
+@media(min-width:768px){
+    .title h1{
+        font-size: 190%;
+    }
+
+    .image-descrip{
+        width: 70%;
+    }
+
+    .price{
+        width: 20%;
+    }
+
+    .quit form button{
+        font-size: 150%;
+    }
+
+    .description h2{
+        font-size: 140%;
+    }
+
+    .description p{
+        font-size: 140%;
+    }
+
+    .price h3{
+        font-size: 150%;
+    }
+
+    .price span{
+        font-size: 130%;
+    }
+
+    .bottom a{
+        font-size: 150%;
+    }
+
+    .sale-product form button{
+        font-size: 160%;
+    }
+}
+@media(min-width:1024px){
+    .delete{
+        display:none
+    }
+
+    .bottom_delete{
+        display: block;
+    }
+
+    .bottom_delete form button{
+        font-size: 130%;
+        background-color:rgb(0,154,202);
+        border: 0;
+        border-radius: 10px;
+        box-shadow:7px 5px 9px black;
+        margin-top: 1%;
+        padding: 1%;
+    }
+
+    .title{
+        width: 100%;
+    }
+
+    .title h1{
+        font-size: 230%;
+        width: 100%;
+    }
+
+    section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .products{
+        width: 70%;
+    }
+
+    .sale-product{
+        width: 30%;
+        margin-top: 5%;
+        border-top: 1px solid grey;
+        padding-left: 2%;
+        border-left: 1px solid grey;
+    }
+
+    .image-descrip{
+        width: 60%;
+    }
+
+    .description h2{
+        font-size: 150%;
+    }
+
+    .description p{
+        font-size: 130%;
+    }
+
+    .number{
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        border-left: 1px solid grey;
+        align-items: center;
+    }
+
+    .allPoint{
+        font-size: 150%;
+    }
+
+    .point{
+        border: 1px solid black;
+    }
+
+    .point p{
+        text-align: center;
+    }
+
+    .price{
+        width: 20%;
+    }
+
+    .money h3{
+        font-size: 180%;
+    }
+
+    .money span{
+        font-size: 170%;
+    }
+
+    .bottom{
+        display:none;
+    }
+
+    .info-price{
+        margin-bottom: 8%;
+    }
+
+    .info-price h4{
+        font-size: 120%;
+    }
+
+    .info-price span{
+        margin-left: 5%;
+    }
+
+    .continue{
+        display: block;
+    }
+
+    .continue button{
+        width:100%;
+        font-size: 130%;
+        background-color:rgb(0,154,202);
+        border: 0;
+        border-radius: 10px;
+        box-shadow:7px 5px 9px black;
+        margin-top: 5%;
+    }
+}

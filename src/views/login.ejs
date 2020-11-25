@@ -1,0 +1,77 @@
+<%- include('partials/head', {title: 'UnlimitedSport'}) %>
+<link rel="stylesheet" href="/stylesheets/login.css">
+
+<div class="title">
+  <h1>Bienvenido a Unlimited Sports</h1>
+</div>
+
+<div class="login">
+  
+  <div class="logo">
+      <!--La img del usuario-->
+      <div class="image">
+          <img src="/images/LOGO - SPORT.png" alt="">
+      </div>
+      <!--Termina la img del usuario-->
+  </div>
+  <!--El form de ingreso del usuario-->
+  <div class="form">
+      <form action="/users/login" method="post">
+          <label for="">Usuario</label>
+          <input type="email" name="email" id="" placeholder="Ej: ulimited@sports.com">
+          <label for="">Contraseña</label>
+          <input type="password" name="password" id="" placeholder="Contraseña">
+          <label for="">Recordar</label>
+          <input type="checkBox" name="remember">
+          <% if(typeof errors != 'undefined'){ %>
+            <% errors.forEach(error =>{  %>
+            <p><%= error.msg %> </p>
+            <% })} %>
+            <% if(typeof error != 'undefined'){ %>
+                  <p><%= error %> </p>
+              <% } %>
+          <button type="submit">Entrar</button>
+      </form>
+  </div>
+  <!--Aca termina el form-->
+  <div class="info">
+      <!--Aparece para mobiel y table-->
+      <form action="" method="get" class="pass-regis">
+          <button type="submit">Olvide mi contraseña</button>
+      </form>
+      <form action="/users/register" method="get" class="pass-regis">
+          <button type="submit">Registrarme</button>
+      </form>
+      <!--Aca termina lo de mobile y table-->
+      <!--Aparece en pantalla de escritorio-->
+      <div class="remenber mail">
+          <a href="">Olvide mi Contraseña</a>
+      </div>
+      <div class="register mail">
+          <a href="/users/register">Registrarme</a>
+      </div>
+      <!--Aca termina lo de la pantalla de escritorio-->
+  </div>
+
+  <!--Son los botones de las redes sociales-->
+  <div class="redes">
+      <div class="facebook">
+          <form action="" method="get" class="social">
+              <button type="submit">Iniciar con Facebook</button>
+          </form>
+      </div>
+      <div class="gmail">
+          <form action="" method="get" class="social">
+              <button type="submit">Iniciar con Gmail</button>
+          </form>
+      </div>
+      <div class="instagran" >
+          <form action="" method="get" class="social">
+              <button type="submit">Iniciar con instagran</button>
+          </form>
+      </div>
+  </div>
+  <!--Aca termina los botonoes de redes sociales -->
+</div>
+</body>
+</html>

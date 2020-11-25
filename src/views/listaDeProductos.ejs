@@ -1,0 +1,37 @@
+<%- include('partials/head', {title: 'UnlimitedSport'}) %>
+<link rel="stylesheet" href="/stylesheets/products.css">
+<!-- Header -->
+<%- include('partials/header') %> 
+<!-- /Header -->
+
+<h1> TODOS LOS PRODUCTOS </h1>
+
+<div class="container">
+
+<% products.forEach(product => { %>
+ 
+    <div class="card" >
+  
+        <img src="/images/products/<%= product.image %> " class="card-img-top" alt="...">
+
+        <div class="card-body">
+
+          <% categorias.forEach(marca => { %>
+            <% if (marca.id == product.categoriaId) { %>
+              <h4 class="card-title"> <%= marca.marca %> </h4>
+            <% } %>
+
+          <% }); %> 
+
+          
+          <h5 class="card-title"> <%= product.nombre %> </h5>
+          <a href="/products/<%= product.id %> " class="btn btn-primary">Comprar</a>
+        </div>
+      </div>
+    
+
+      <% }); %> 
+    </div>
+
+
+<%- include('partials/footer') %> 

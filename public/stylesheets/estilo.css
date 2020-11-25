@@ -1,0 +1,587 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /*border: solid 1px;*/
+}
+
+/*--header--*/
+
+.fantasma {
+  display: none;
+}
+
+.logo2 {
+  width: 100px;
+  height: 50px;
+}
+
+.icono {
+  font-size: 22px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.buscador {
+  margin-top: 15px;
+  width: 90%;
+  margin-left: 20px;
+}
+
+.buscar {
+  margin-top: 5px;
+  background-color: #0099cc;
+  width: 90%;
+  margin-left: 20px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+#btn {
+  border: none;
+  color: black;
+}
+
+/*menu*/
+.li {
+  display: none;
+}
+.contenedorr {
+  display: grid;
+  grid-template-columns: repeat(2, 102px);
+  grid-gap: 87px;
+  justify-content: end;
+}
+
+header {
+  background: white;
+  color: black;
+  padding: 1em 0;
+  position: relative;
+}
+.site-nav {
+  top: 100%;
+  right: 0;
+  position: absolute;
+  background: white;
+  clip-path: circle(0px at top left);
+  transition: clip-path ease-in-out 700ms;
+  z-index: 99;
+  width: 100%;
+  text-align: start;
+}
+.site-nav-open {
+  clip-path: circle(150% at top right);
+}
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.site-nav li {
+  border-bottom: 1px solid #575766;
+}
+.site-nav li:last-child {
+  border-bottom: none;
+}
+.site-nav a {
+  color: black;
+  display: block;
+  padding: 2em 6em;
+  text-transform: uppercase;
+  text-decoration: none;
+  height: 70px;
+}
+.site-nav a:hover,
+.site-nav a:focus {
+  background: #0099cc;
+  color: white;
+}
+
+.site-nav--icon {
+  display: inline-block;
+  font-size: 1.5em;
+  margin-right: 1em;
+  width: 1.1em;
+  text-align: right;
+  color: rgb(192, 192, 192);
+}
+.site-nav--icon:hover {
+  color: white;
+}
+
+.menu-toggle {
+  display: block;
+  padding: 1em;
+  position: absolute;
+  top: 0.1em;
+  left: 0.5em;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 4px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: rotate(45deg) translate(6px, -1px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(-45deg) translate(14px, -8px);
+}
+ul a.user,
+ul a.shopping {
+  display: none;
+}
+
+/*fin de menu*/
+
+.usuario {
+  display: none;
+}
+
+/*-----carousel principal-----*/
+/*indicadores*/
+.carousel-indicators li {
+  border-radius: 100%;
+  height: 10px;
+  width: 10px;
+}
+/* hover de los indicadores*/
+.carousel-indicators li:hover {
+  background-color: #0099cc;
+}
+/*tamaño de la imagen*/
+.carousel-item img {
+  height: 40vh;
+}
+.carousel {
+  margin-top: 0px;
+}
+
+/*--Fin de Carousel principal--*/
+
+/*--video--*/
+iframe {
+  margin-top: 0;
+  height: 350px;
+  width: 100%;
+  padding: 20px;
+}
+
+/*--Las mejores oferta--*/
+.off {
+  display: flex;
+  flex-direction: column;
+}
+
+.off a img {
+  width: 100%;
+  height: 300px;
+}
+
+.item {
+  height: 100px;
+}
+
+.item img {
+  height: 200px;
+  padding: 10px;
+}
+
+.art {
+  height: 150px;
+}
+
+/*--Titulos---*/
+h4 {
+  font-family: Homer Simpson UI;
+  text-align: center;
+  background: #ececec;
+}
+
+/*--Articulos--*/
+.item {
+  height: auto;
+}
+
+.art {
+  height: auto;
+}
+
+.art:hover {
+  border: outset 2px #0099cc;
+}
+
+.card-marca {
+  color: black;
+}
+
+.card-name {
+  font-size: 10px;
+}
+
+.card-price {
+  color: #0099cc;
+}
+
+/****owl carousel*****/
+.owl-carousel .owl-nav button.owl-prev {
+  position: absolute;
+  top: 20%;
+  right: 1470px;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.owl-carousel .owl-nav button.owl-prev span,
+.owl-carousel .owl-nav button.owl-next span {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 40px;
+  position: relative;
+  bottom: 10px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  position: absolute;
+  top: 40%;
+  left: 430px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  position: absolute;
+  top: 40%;
+  right: 430px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.owl-carousel {
+  margin-top: 70px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  display: none;
+}
+
+div.owl-theme .owl-dots .owl-dot span {
+  display: none;
+}
+
+.owl-carousel .owl-nav button.owl-next span {
+  color: gray;
+  font-size: 40px;
+  position: relative;
+  bottom: 10px;
+}
+
+.owl-carousel.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: #0099cc;
+  color: #fff;
+  text-decoration: none;
+}
+
+/*---footer--*/
+
+.tarjetas p {
+  color: white;
+  background: black;
+  text-align: center;
+}
+
+section p {
+  font-size: 20px;
+}
+
+.DATAWEB {
+  height: 50px;
+}
+
+.redes {
+  background: #d4d4d4;
+}
+
+.newsletter {
+  background: #0099cc;
+}
+
+.icon {
+  border-radius: 100%;
+  font-size: 30px;
+}
+
+.pagos {
+  background: black;
+}
+
+.list-group-item {
+  background-color: black;
+}
+
+/*---------------------------------------------------------------------------------------------------------------*/
+
+@media (min-width: 768px) {
+  .contenedorr {
+    grid-gap: 234px;
+  }
+  /*--Las mejores oferta--*/
+
+  .off a img {
+    width: 96%;
+    height: 385px;
+    margin-left: 20px;
+  }
+
+  /*--flechas del owl carousel --*/
+  .owl-carousel .owl-nav button.owl-prev {
+    right: 720px;
+  }
+
+  .owl-carousel .owl-nav button.owl-next {
+    left: 720px;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+
+@media (min-width: 1024px) {
+  /*-----header-----*/
+  .fantasma {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 84px;
+  }
+
+  .div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    background: #0099cc;
+  }
+
+  .logo2 {
+    display: none;
+  }
+
+  .logo {
+    width: 150px;
+    height: 70px;
+    margin-right: 42px;
+  }
+
+ 
+  .lupa2 {
+    display: none;
+  }
+
+  .lupa {
+    position: absolute;
+    top: 42px;
+    right: 20px;
+    color: rgb(175, 175, 175);
+  }
+
+
+  .envio {
+    margin-top: 15px;
+  }
+
+  .flete {
+    margin-right: 8px;
+  }
+
+  .serch {
+    right: 354px;
+    top: 29px;
+  }
+  .buscador {
+    width: 400px;
+
+    border-radius: 40px;
+  }
+  /*menu */
+  .contenedorr {
+    display: none;
+  }
+  ul li.faa {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+  .site-nav {
+    height: 40px;
+    position: relative;
+    background: black;
+    margin-right: 10px;
+    clip-path: initial;
+  }
+  .site-nav li {
+    display: inline-block;
+    border: none;
+  }
+  .site-nav li:hover {
+    background: #0099cc;
+  }
+
+  .site-nav a {
+    padding: 0;
+    margin-left: 1em;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    height: 40px;
+    padding: 10px;
+  }
+  .site-nav--icon {
+    display: none;
+  }
+
+  ul a.user {
+    display: inline-block;
+    width: 40px;
+    position: absolute;
+    top: 0;
+    right: 58px;
+    font-size: 20px;
+  }
+  ul a.shopping {
+    display: inline-block;
+    width: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+  }
+
+  header {
+    padding: 0;
+  }
+  /*fin de menu */
+
+  /*.user {
+    display: none;
+  }*/
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0rem;
+  }
+
+  /*--contenido --*/
+
+  .off {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .off a img {
+    width: 90%;
+  }
+
+  a.nav-link {
+    color: white;
+  }
+
+  .navbar-light .navbar-nav .active > .nav-link,
+  .navbar-light .navbar-nav .nav-link.active,
+  .navbar-light .navbar-nav .nav-link.show,
+  .navbar-light .navbar-nav .show > .nav-link {
+    color: white;
+  }
+
+  .navbar-expand-lg .navbar-nav {
+    background: black;
+  }
+
+  .navbar {
+    background: black;
+  }
+
+  /*----owl carousel----*/
+  .item {
+    height: auto;
+  }
+
+  .art {
+    height: auto;
+  }
+
+  .owl-carousel .owl-nav button.owl-next {
+    top: 40%;
+    left: 980px;
+  }
+
+  .owl-carousel .owl-nav button.owl-prev {
+    top: 40%;
+    right: 980px;
+  }
+
+  #list{
+    display: none;
+  }
+
+  /*--footer--*/
+
+  .container-footer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .newsletter {
+    width: 100%;
+  }
+
+  .redes {
+    width: 100%;
+  }
+
+  .tarjetas {
+    width: 70%;
+  }
+
+  .pagos {
+    width: 70%;
+    margin-left: 20%;
+  }
+
+  .tarjetas p {
+    text-align: center;
+    color: white;
+  }
+
+  footer {
+    background: black;
+  }
+
+  .AFIP {
+    width: 100%;
+    background: white;
+    text-align: start;
+    margin-left: 6px;
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/form.css">
+    <title>Formulario Administrativo</title>
+</head>
+
+
+<body>
+
+    <header>
+        <h1>Formulario Administrativo</h1>
+    </header>
+
+    <section>
+
+        <div class="formulario">
+
+            <form action="/products/create" method="post" enctype="multipart/form-data">
+
+                <div class="right">
+
+                <label for="nombre">Nombre del producto</label>
+                <input type="text" name="name" id="" placeholder="Nombre del producto">
+
+                <label for="categoria">Deporte</label>
+                <input type="text" name="sport" id="" placeholder="Deporte">
+
+                <label for="precio">Precio</label>
+                <input type="number" name="price" id="" placeholder="Precio">
+
+                <label for="">Descuento</label>
+                <input type="text" name="discount" id="" placeholder="Descuento">
+
+        
+                </div>
+
+
+                <div class="left">
+
+                <label for="marca">Marca</label>
+                <select name="marca" id="">
+                    <% categorias.forEach(categoria =>{ %>
+                    <option value="<%= categoria.id %>"><%= categoria.marca %> </option>
+                    <% }) %>
+                    </select>
+
+                <label for="descripcion">Descripción</label>
+                <textarea name="description" id="" cols="30" rows="5" placeholder="Descripción"></textarea>
+
+                <label for="foto">Selecciona una imagen</label><input type="file" name="image" id="imagen" placeholder="Imagen">
+
+
+                </div>
+
+
+                <div class="botones">
+                <button type="submit" class="guardar">Guardar</button>
+
+                <button type="reset">Resetear</button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</body>
+
+
+</html>

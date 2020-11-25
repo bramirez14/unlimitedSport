@@ -1,0 +1,108 @@
+<%- include('partials/head', {title: 'UnlimitedSport'}) %>
+<!-- Header -->
+<%- include('partials/header') %> 
+<!--
+<link rel="stylesheet" href="/stylesheets/detalleProducto.css">
+ /Header -->
+ <link rel="stylesheet" href="/stylesheets/detailProduct.css">
+
+
+    <section>
+      <!--Aca comienza la parte de la img del producto y su descripcion-->
+        <div class="imagen">
+            <div class="img">
+                <img src="/images/products/<%= product.image %> " alt="la imagen del Producto">
+            </div>
+            <div class="photos">
+                <h1>las mini imagenes del producto </h1>
+            </div>
+            <article class="description">
+                <h2>Descripción:</h2>
+                <p><%= product.descripcion %> </p>
+            </article>
+        </div>
+      <!--Termina aca -->
+      <!--Comienza todo lo que incluye el precio y descuento y los formularios-->
+        <div class="precio">
+            <h2><%= product.nombre %> </h2>
+           
+            <h3>$<%= product.precio %> </h3>
+            <% if(product.descuento !=0){ %>
+                <h4><%= product.descuento %> % OFF</h4>
+               <h5 class="h5">Precio con Descuento: <span>$ <%= precioConDescuento %> </h5>
+                <% }%> 
+                
+      <!--Este formulario es valido para responsive celu y table-->
+            <form action="" method="post" class="tallephone">
+                <div class="seleccion">
+                <select name="talla" id="">
+                    <option value="">Talla</option>
+                    <option value="">38.5</option>
+                    <option value="">39.0</option>
+                    <option value="">39.5</option>
+                    <option value="">40</option>
+                    <option value="">40.5</option>
+                    <option value="">41</option>
+                    <option value="">41.5</option>
+                    <option value="">42</option>
+                    <option value="">42.5</option>
+                    <option value="">43.5</option>
+                </select>
+                <select name="cantidad" id="">
+                    <option value="">Cantidad</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                </select>
+                </div>
+                <button type="submit">Comprar ahora</button>
+            </form>
+      <!--Aca termina el formulario del celu y table-->
+      <!--Comienza el formulario para escritorio con sus nuevos estilos-->
+            <h6 class="change">Elija su Talla:</h6>
+            <form action="" method="post" class="talles">
+              <div class="uno">
+                <input type="button" name="" id="" value="38.5">
+                <input type="button" name="" id="" value="39">
+                <input type="button" name="" id="" value="39.5">
+                <input type="button" name="" id="" value="40">
+              </div>
+              <div class="dos">
+                <input type="button" name="" id="" value="40.5">
+                <input type="button" name="" id="" value="41">
+                <input type="button" name="" id="" value="41.5">
+                <input type="button" name="" id="" value="42">
+              </div>
+                <select name="cantidad" id="">
+                    <option value="">cantidad</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                </select>
+
+
+
+                <button type="submit">Comprar ahora</button>
+      <!--termina el formulario con los estilos para escritorio-->
+            </form>
+            <form action="/checkData/<%= product.id %> " method="post" class="boton">
+                <button type="submit">Agregar al carrito</button>
+            </form>
+            <form action="/products/edit/<%= product.id %> " method="get" class="boton">
+                <button type="submit">EDITAR</button>
+            </form>
+            
+            <form action="/products/delete/<%= product.id %> ?_method=DELETE" method="POST" class="boton">
+                <button type="submit" class="action-button delete" >ELIMINAR</button>
+            </form>
+        </div>
+    </section>
+    <!--section-->
+    <!--footer-->
+    <%- include('partials/footer') %> 
+    <!--footer-->
+    
+
+

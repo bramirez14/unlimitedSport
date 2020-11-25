@@ -1,0 +1,93 @@
+<%- include('partials/head', {title: 'UnlimitedSport'}) %>
+<!-- Header -->
+<%- include('partials/header') %> 
+<link rel="stylesheet" href="/stylesheets/checkOut.css">
+<!-- /Header -->
+
+       
+  
+    <!--header-->
+    <!--Section-->
+    <section class="articleProduct">
+        <div class="title">
+            <h1>Carrito de compras ()</h1>
+        </div>
+        <!--La parte de products se repetira con un forEach()-->
+         
+        <div class="products">
+
+            <div class="product">
+                <!--Es la parte donde el usuario puede borrar un producto del carrito-->
+                <div class="delete">
+                    <div class="quit">
+                        <form action="" method="post">
+                            <button type="submit">X</button>
+                        </form>
+                    </div>
+                </div>
+                <!--Termina lo de el borrar-->
+                <!--Se encuentra la img y la descripcion del producto-->
+                <div class="image-descrip">
+                    <div class="image">
+                        <img src="/images/products/<%= product.image  %> " alt="">
+                    </div>
+                    <div class="description">
+                        <h2><%= product.name %> </h2>
+                        <p>Talla: 42</p>
+                        <p>Deporte: <%= product.sport %> </p>
+                    </div>
+                </div>
+                <!--termina lo de la img y la descripcion-->
+                <!--*number Aparece en la media query de 1024-->
+                <div class="number">
+                    <div class="allPoint">
+                        <p>Cantidad</p>
+                    <div class="point">
+                        <p>1</p>
+                    </div>
+                    </div>
+                </div>
+                <!--Termina el number-->
+                <!--El precio del producto-->
+                <div class="price">
+                    <div class="money">
+                        <h3>Precio</h3><span>$<%= product.price %> </span>
+                    </div>
+                </div>
+                <!--Termina el precio del producto-->
+            </div>
+            <!--Es un impervinculo que aparece el la media query de 1024px-->
+            <div class="bottom">
+                <a href="">Continuar comprando</a>
+            </div>
+            <!--Termina el impervinculo-->
+            <div class="bottom_delete">
+                <form action="" method="post">
+                    <button type="submit">Eliminar del carrito</button>
+                </form>
+            </div>
+        </div>
+         
+        <!--Termina lo que recorre el forEach()-->
+        <!--Aqui los totales de los productos-->
+        <div class="sale-product">
+            <div class="info-price"><h4>Cantidad de Productos()<span>$<%= product.price %> </span></h4></div>
+            <div class="info-price"><h4>Costo de envio<span>No tiene costo</span></h4></div>
+            <div class="info-price"><h4>Total a pagar<span>$<%= product.price %> </span></h4></div>
+            <form action="" method="post" class="pay">
+                <button type="submit">Comprar</button>
+            </form>
+            <form action="" method="get" class="continue">
+                <button type="submit">Continuar comprando</button>
+            </form>
+        </div>
+        <!--Termina el total de los productos-->
+    </section>
+    <!--Section-->
+     <!--section-->
+
+     <!--section-->
+    <!--footer-->
+    <%- include('partials/footer') %> 
+    <!--footer-->
+    

@@ -1,0 +1,58 @@
+<%- include('partials/head', {title: 'Editar'}) %>
+<link rel="stylesheet" href="/stylesheets/form.css">
+ <!--header-->
+    <%-include('partials/header')  %> 
+    <!--header-->
+    <h1>Producto a editar: <%= product.nombre %></h1>
+    
+<div class="formulario">
+
+    <form action="/products/edit/<%= product.id %>?_method=PUT" method="post">
+
+    <div class="right">
+
+        <label for="nombre" >Nombre</label>
+        <input type="text" name="name" id="nombre" placeholder="Nombre del producto" value="<%= product.nombre %>">
+
+        <label for="marca" >Marca</label>
+        <select name="marca" id="" >
+            <% marcas.forEach(marca => { %>
+                <% if (product.categoriaId == marca.id) { %>
+                 <option selected value="<%= marca.id %> "><%= marca.marca %> </option>
+                <% }else{ %>
+                    <option value="<%= marca.id %> "><%= marca.marca %> </option>
+                <% } %>     
+            <% }) %>
+        </select>
+
+        <label for="Deporte">Deporte</label>
+        <input type="text" name="sport" id="Deporte" placeholder="Deporte" Value="<%= product.deporte %> ">
+
+    </div>
+
+    <div class="left">
+        
+        <label for="precio">Precio</label>
+        <input type="text" name="price" id="precio" placeholder="Precio" Value="<%= product.precio %> ">
+
+        <label for="descuento">Descuento</label>
+        <input type="text" name="discount" id="descuento" placeholder="Descuento" Value="<%= product.descuento %> ">
+        
+        <label for="descripcion">Descripción</label>
+        <input type="text" name="description" id="descripcion" placeholder="Descripción" Value="<%= product.descripcion %> ">
+        
+    </div>
+        
+    <div class="botones">
+
+        <button type="submit" class="guardar">Modificar</button>
+
+        <button type="reset">Resetear</button>
+
+    </div>
+
+    </form>
+
+</div>
+
+    <%- include('partials/footer') %>

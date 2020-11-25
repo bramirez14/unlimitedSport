@@ -1,0 +1,85 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#0099cc;
+    padding: 3%;
+}
+
+header h1{
+    background-color: black;
+    color: white;
+    padding: 2%;
+    text-align: center;
+}
+
+.formulario{
+    background-color: white;
+    padding: 2%;
+}
+
+.formulario form label, .formulario form input,textarea, .formulario form button{
+    font-size: 140%;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+}
+
+.formulario form input, textarea,button{
+    border: 1px solid black;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.formulario form button{
+    background-color:#0099cc;
+    margin-top: 5%;
+}
+
+input{
+    margin-bottom: 25px;
+}
+
+
+@media(min-width:1024px){
+
+    .formulario form{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .formulario .right, .formulario .left{
+        width: 48%;
+    }
+
+    .formulario .right, input.formulario .right textarea{
+        margin-bottom: 5%;
+    }
+
+    .formulario .left input{
+        margin-bottom: 11.5%;
+    }
+
+    .formulario .botones{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .formulario .botones button{
+        width: 20%;
+    }
+
+    .formulario .botones .guardar{
+        margin-right: 5%;
+    }
+
+      
+}

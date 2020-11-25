@@ -1,0 +1,64 @@
+<%- include('partials/head', {title: 'UnlimitedSport'}) %>
+<link rel="stylesheet" href="/stylesheets/users.css">
+<!-- Header -->
+<%- include('partials/header') %> 
+<!-- /Header -->
+
+<h2>Nueva cuenta </h2>
+
+<form action="/users/register" method="POST" enctype="multipart/form-data" class="container">
+
+
+
+<div class="personal">
+
+<h3>INFORMACION PERSONAL </h3>
+
+<label for="">Nombre</label> 
+<input type="text" name="nombre"id='nombre'>
+
+<small class="error">
+    
+    
+</small>
+
+<label for="">Apellido</label>
+<input type="text" name="apellido" id="apellido">
+
+<% if(typeof errors != 'undefined'){ %> 
+    <% errors.forEach(error => { %>
+        <p><%= error.msg  %> </p>
+    <% }); %> 
+    <% } %>
+
+</div>
+
+<div class='sesion'>
+
+<h3>INFORMACION DE INICIO DE SESION</h3>
+
+<label for="">Email</label>
+<input type="email" name="email" id="email">
+
+<label for="">Contraseña</label>
+<input type="password" name="contraseña" id="contraseña">
+
+<label for="">Confirmar Contraseña </label>
+<input type="password" name="rcontraseña" id="rcontraseña">
+<% if(typeof error != 'undefined'){ %>
+    <p><%= error %> </p>     
+<% } %>
+
+<label for="foto">Imagen</label>
+<input type="file" name="image" class="form-control" id="image">
+
+
+
+ <button type="submit">CREAR CUENTA</button>
+
+</div>
+
+</form>
+
+
+<%- include('partials/footer') %> 

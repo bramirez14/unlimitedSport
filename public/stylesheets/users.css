@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    margin-top: 2%;
+}
+
+h3{
+    margin-bottom: 5%;
+    margin-top: 8%;
+}
+
+label{
+    margin-top: 7%;
+}
+
+.container{   
+    display: flex;
+    flex-direction: column;
+}
+
+.personal{
+    display:flex;
+    flex-direction: column; 
+}
+
+.sesion{
+    display:flex;
+    flex-direction: column; 
+}
+
+button{
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+
+@media(min-device-width: 1024px){
+    
+h2{
+    margin-bottom: 5%;
+}
+
+h3{
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.container{   
+    display: flex;
+    flex-direction: row;
+}
+
+.sesion{
+    margin-left: 7%;
+}
+
+button{
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+}
